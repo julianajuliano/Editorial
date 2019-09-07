@@ -121,6 +121,14 @@
     max-width: 700px;
 }
 
+.prev-next-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
 .authors {
     display: flex;
     justify-content: center;

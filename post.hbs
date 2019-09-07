@@ -26,8 +26,18 @@ into the {body} of the default.hbs template --}}
         {{subscribe_form placeholder="youremail@example.com"}}
     </section>
     {{/if}}
+  
+    <footer class="post-footer">  
 
-    <footer class="post-footer">
+        <div class="prev-next-buttons">
+            {{#prev_post}}
+                <a href="{{url}}" class="button">{{title}}</a>
+            {{/prev_post}}
+
+            {{#next_post}}
+                <a href="{{url}}" class="button">{{title}}</a>
+            {{/next_post}}
+        </div>      
 
         <div class="authors">
             {{#foreach authors}}
