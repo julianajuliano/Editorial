@@ -2,10 +2,10 @@
     "name": "editorial",
     "description": "This is Editorial, a news-oriented theme for Ghost.",
     "demo": "https://editorial.ghost.io",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "engines": {
-        "ghost": ">=2.0.0",
-        "ghost-api": "v2"
+        "ghost": ">=3.0.0",
+        "ghost-api": "v3"
     },
     "license": "MIT",
     "screenshots": {
@@ -16,6 +16,7 @@
         "zip": "gulp zip",
         "pretest": "gulp build",
         "test": "gscan .",
+        "test:ci": "gscan --fatal --verbose .",
         "preship": "yarn test",
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
     },
@@ -49,15 +50,15 @@
         }
     ],
     "devDependencies": {
-        "beeper": "^1.1.1",
-        "gscan": "^2.0.0",
-        "gulp": "4.0.0",
-        "gulp-livereload": "4.0.1",
+        "beeper": "2.0.0",
+        "gscan": "3.1.1",
+        "gulp": "4.0.2",
+        "gulp-livereload": "4.0.2",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.4",
         "gulp-watch": "5.0.1",
-        "gulp-zip": "4.2.0",
-        "node-sass": "^4.10.0"
+        "gulp-zip": "5.0.1",
+        "node-sass": "4.13.0"
     },
     "config": {
         "posts_per_page": 6
