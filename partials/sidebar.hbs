@@ -5,6 +5,23 @@
         {{#if @site.navigation}}
             {{navigation}}
         {{/if}}
+     
+
+        {{!-- Tags --}}
+        <section>
+            <header class="major">
+                <h2>Tags</h2>
+            </header>
+            <div class="tags">
+                <ul>
+                    {{#get "tags" limit="all"}}
+                        {{#foreach tags}}
+                            <li><a href="{{url}}" title="{{name}}">{{name}}</a></li>
+                        {{/foreach}}
+                    {{/get}}
+                </ul>
+            </div>            
+        </section>
 
         {{!-- Recent posts --}}
         {{#get "posts" limit="3" filter="featured:true" as |mini_post|}}
@@ -28,22 +45,6 @@
                 </section>
             {{/if}}
         {{/get}}
-
-        {{!-- Tags --}}
-        <section>
-            <header class="major">
-                <h2>Tags</h2>
-            </header>
-            <div class="tags">
-                <ul>
-                    {{#get "tags" limit="all"}}
-                        {{#foreach tags}}
-                            <li><a href="{{url}}" title="{{name}}">{{name}}</a></li>
-                        {{/foreach}}
-                    {{/get}}
-                </ul>
-            </div>            
-        </section>
 
         {{!-- Footer --}}
         <footer id="footer">
