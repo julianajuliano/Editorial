@@ -1,26 +1,19 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
-
-
-{{!-- Featured Post --}}
+{{!-- Chamada Hackerrank --}}
 {{#is "home"}}
-{{#get "pages" filter="featured:true" limit="1" as |featured_post|}}
-    {{#foreach featured_post}}
-        <article id="banner">
-            <div class="content">
-                <header>
-                    <h1><a href="{{url}}">{{title}}</a></h1>
-                    {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
-                </header>
-                {{content words="35 "}}
-                <ul class="actions">
-                    <li><a href="{{url}}" class="button big">Saiba mais</a></li>
-                </ul>
-            </div>
-        </article>
-    {{/foreach}}
-{{/get}}
+    <article id="banner">
+        <div class="content">
+            <header>
+                <h1><a href="https://mailchi.mp/2f6bf7353b14/aumente-suas-chances-de-passar-em-entrevistas">Aumente em até 70% sua chance de passar na vaga de Programadora Junior</a></h1>
+            </header>
+            <ul class="actions">
+                <li><a href="https://mailchi.mp/2f6bf7353b14/aumente-suas-chances-de-passar-em-entrevistas" class="button big">Saiba mais</a></li>
+            </ul>
+        </div>
+    </article>
+
 {{/is}}
 
 {{!-- Posts --}}
